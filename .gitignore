@@ -1,0 +1,50 @@
+# Виртуальные окружения
+.venv/
+venv/
+ENV/
+env/
+
+# Данные
+data/
+
+# Тяжелые форматы данных
+*.csv
+*.xlsx
+*.json
+*.parquet
+*.sqlite
+*.db
+*.tsv
+*.pkl
+*.pickle
+
+# Окружение и секреты
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# Артефакты Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Артефаткы Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.jupyter_notebook_config.py
+*.device.ipynb
+
+# Служебные файлы macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Кэш среды
+.cache/pre-commit/
+.ruff_cache/

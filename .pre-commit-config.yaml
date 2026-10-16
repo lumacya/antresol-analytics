@@ -1,0 +1,27 @@
+# Хуки запускаются перед каждым коммитом: git commit сам вызывает pre-commit
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace      # пробелы в конце строк
+      - id: end-of-file-fixer        # перевод строки в конце файла
+      - id: check-yaml               # синтаксис YAML, в том числе docker-compose.yml
+      - id: check-added-large-files  # не даст закоммитить дамп или выгрузку
+      - id: detect-private-key       # приватные ключи вроде id_ed25519
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.1
+    hooks:
+      - id: ruff                     # линтер Python и ноутбуков
+        args: [--fix]
+      - id: ruff-format              # форматирование
+
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 4.4.0
+    hooks:
+      - id: sqlfluff-lint            # стиль SQL; диалект берётся из .sqlfluff
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks                 # поиск паролей, токенов и ключей
