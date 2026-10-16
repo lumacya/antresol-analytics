@@ -4,7 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "ipykernel>=7.4.0",
+    "pandas>=3.0.6",
+    "psycopg>=3.3.6",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy>=2.1.4",
+]
 
 [project.scripts]
 antresol-analytics = "antresol_analytics:main"
