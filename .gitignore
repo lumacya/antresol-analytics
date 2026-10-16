@@ -44,3 +44,7 @@ wheels/
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Кэш среды
+.cache/pre-commit/
+.ruff_cache/
